@@ -1,0 +1,22 @@
+<?php 
+
+$list = array("HELLO",18,true);
+
+$list[] = 16;
+
+
+$list[3] = "jHON";
+$list[3] = "Alex";
+
+echo count($list);
+
+echo "<br>";
+
+print_r($list);
+
+for ($i=0; $i < count($list); $i++) { 
+	echo "Elem $i is equal".$list[$i];
+	echo "<br>";
+}
+
+ ?>
