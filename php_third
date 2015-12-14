@@ -1,0 +1,14 @@
+  $arr = array(array(0,5,-5),
+    array("hello", "world"),
+      //print_r($arr)
+    array("name"=>"Alex","age"=>27)
+  	);
+
+    for ($i=0; $i < count($arr); $i++) { 
+    	for ($j=0; $j < count($arr[$i]); $j++) { 
+    		echo $arr[$i][$j];
+    		echo "<br>";
+    	}
+    }
+
+//  echo $arr[2]["age"];
