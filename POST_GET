@@ -1,0 +1,35 @@
+//file array.php
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<form action="send.php" method="post">
+
+<p>Name:<br><input type="text" name="name" /></body>
+
+<input type="submit" name="send" value="Send">
+
+</form>
+
+
+ </body>
+</html>
+
+
+//file send.php
+<?php 
+
+   if(isset($_POST["send"])){
+   //	print_r($_POST);
+
+   	$name = $_POST["name"];
+
+   	echo "Hello, " .$name;
+   }
+
+ ?>
+
