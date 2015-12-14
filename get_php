@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<?php 
+
+   //print_r($_GET);
+
+   $name = $_GET["name"];
+
+   echo "Hello, " . $name;
+
+ ?>
+<form action="" method="get">
+
+<p>Name:<br><input type="text" name="name" /></body>
+
+<input type="submit" name="send" value="Send">
+
+</form>
+
+
+ </body>
+</html>
