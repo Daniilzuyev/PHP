@@ -1,0 +1,19 @@
+     //hello = привет
+
+    $arr = array("hello"=>"hi", "world"=>"nice");
+
+    //echo $arr["hello"] . " " . $arr["world"]; // выведется hi nice
+
+ /*   $arr["age"] = 27;
+    $arr["hello"] = "Alexan";
+
+    print_r($arr);*/
+
+    foreach ($arr as $key => $value) {
+    	echo "$key equal $value <br>";
+    }
+
+
+        foreach ($arr as $value) {
+    	echo "$value <br>";
+    }
