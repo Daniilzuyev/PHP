@@ -1,0 +1,3 @@
+		<?php 
+            include("name_another_file.php");
+		 ?>
