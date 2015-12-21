@@ -1,0 +1,29 @@
+<?php 
+
+     class PC {
+     	public $CPU = 2.2;
+     	public $RAM = 8000;
+     	public $os = "Windows 7";
+     	public $typeCase = "tower";
+
+        public function __construct($arg1, $arg2) {
+        	echo $arg1."; ".$arg2."<br />";
+        }
+
+     	public function showInfo() {
+     		echo "1) CPU: ". $this->CPU;
+            echo "<br />2) RAM: ". $this->RAM;
+            echo "<br />3) Type Case: ". $this->typeCase;
+            echo "<br />".$this->showDescription();
+     	}
+
+     	public function showDescription(){
+     		return $this->os ."; Memory". $this->RAM ."CPU: ". $this-> CPU;
+     	}
+     }
+
+     $pc = new PC(240, 120);
+ //    echo $pc->RAM;
+ //    echo "<br />".$pc->typeCase;
+     $pc->showInfo();
+ ?>
