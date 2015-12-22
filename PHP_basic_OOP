@@ -1,0 +1,23 @@
+<?php 
+
+class Computer {
+	var $monitor;
+	var $keyboard;
+	var $systemBlock;
+
+   function GetName() {
+       echo $this -> monitor;
+       echo $this -> keyboard;
+       echo $this -> systemBlock;
+   }
+   function SetName() {
+   	   $this -> monitor = $monitor;
+   	   $this -> keyboard = $keyboard;
+   	   $this -> systemBlock = $systemBlock; 
+   }
+
+}
+     $object = new Computer;
+     $object -> SetName("LG", "Genius", "Rozy");
+     $object -> GetName();
+ ?>
