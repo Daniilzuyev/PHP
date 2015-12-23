@@ -1,0 +1,8 @@
+<?php 
+define(PI, 3.14159);
+define(E, 25);
+$a = 10;
+echo "PI=".PI*$a;
+unset($a);
+echo "$a";
+ ?>
