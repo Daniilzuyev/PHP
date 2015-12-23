@@ -1,0 +1,26 @@
+<?php 
+
+class Computer {
+	public $monitor = "LG";
+	public $keyboard = "Genius";
+  public $author = "Microsoft";
+	public $systemBlock = "chernenkiy";
+
+  public function __construct($arg1, $arg2) {
+    echo "Create class Computer<br />" $arg1."; ".$arg2"<br />";
+  }
+
+  public function showInfo() {
+    echo "1) Monitor has name: ". $this->monitor;
+    echo "<br />2) Keyboard has name: ". $this->keyboard;
+    echo "<br />3) Monitor has name: ". $this ->systemBlock;
+    echo "<br />";
+    echo $this->showDescription();
+  } 
+  public function showDescription() {
+    return "computor's name: ". $this->author ."; monitor's name: ". $this->monitor ."; keyboard's name: ". $this->keyboard;
+  }
+
+}
+    $computer = new Computer();
+    $computer -> showInfo();
