@@ -1,0 +1,25 @@
+	<?php 
+
+   $a = 2;
+
+switch ($a) {
+	case '1':
+		include ("first.php");
+		break;
+			case '2':
+		include ('second.php');
+		break;
+			case '3':
+		include ('third.php');
+		break;
+			case '4':
+		include ('fourth.php');
+		break;
+			case '5':
+		include ('fifth.php');
+		break;
+	  default:
+		echo "you entered incorrect information";
+		break;
+}
+ ?>
