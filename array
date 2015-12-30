@@ -1,0 +1,15 @@
+ $user_list = array("Serg", "Ivan", "Anton", "Pavel");
+ print_r($user_list);
+ echo "<br />".$user_list[1];
+ _____________________________________________________
+ 
+ $int = array(1,2,3,5,"sdf");
+ print_r($int);
+ _____________________________________________________
+ 
+ $index = array("Ukraine" => "Kiev", "Russia" => "Moscow", "USA" => "London");
+ print_r($index);
+ _____________________________________________________
+ 
+ $length = count($int);
+echo $length;  // выведет 5
