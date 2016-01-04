@@ -1,0 +1,37 @@
+<?php 
+$int;
+for ($i=0; $i < 100; $i++) { 
+	$int[$i] = $i+1;
+}
+print_r($int);
+echo "<hr />";
+
+for ($i=0; $i < count($int); $i++) { 
+	if ($i % 2 != 0) {
+		continue;
+	}
+	else {
+		echo $int[$i]."<br />"; // не будет чисел, которые делятся на 2
+	}
+}
+?>
+
+_____________________________________
+
+<?php 
+$int;
+for ($i=0; $i < 100; $i++) { 
+	$int[$i] = $i+1;
+}
+print_r($int);
+echo "<hr />";
+
+for ($i=0; $i <= count($int); $i++) { 
+	if ($i==47) {
+		break;
+	}
+	else {
+		echo $i."<br />";  // остановиться на 46 (см. стр. 10)
+	}
+}
+?>
