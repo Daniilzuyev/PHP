@@ -1,0 +1,11 @@
+<?php 
+
+$user_list = array("Serg", "Andrew", "Ivan", "Mark", "Stephan", "Fadey");
+$i = 0;
+do {
+	echo ($i + 1).") ".$user_list[$i]."<br />";
+  $i++;
+}
+while ($i < count($user_list));
+echo "<hr />";
+?>
