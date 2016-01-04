@@ -1,0 +1,18 @@
+<?php 
+$i = 0;
+while($i < 10) {
+	echo ($i + 1).") some string<hr />";
+	$i++;
+}
+?>
+
+______________________________________
+
+<?php
+$user_list = array("Serg", "Andrew", "Ivan", "Mark", "Stephan", "Fadey");
+$i = 0;
+while ($i < count($user_list)) {
+	echo ($i + 1).") $user_list[$i]<br />";
+	$i++;
+}
+?>
