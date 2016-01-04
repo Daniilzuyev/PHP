@@ -1,0 +1,27 @@
+<?php 
+
+$user_name = "Petya";
+function func($name) {
+ echo "Hello, ".$name."!"."<br />";
+}
+func($user_name); 
+func("Max");
+
+ ?>
+ 
+ _________________________________
+ 
+ <?php 
+
+$int1 = 10;
+$int2 = 6;
+
+function avg($int1, $int2) { // 
+	$result = ($int1+$int2) / 2;
+ echo "avg = ".$result."<hr />"; 
+}
+  avg(10,4); // выведет 7, так как подставит 10 и 4
+  avg($int1,$int2); // выведет 8, так как подставит 10 и 6
+
+ ?>
+ 
