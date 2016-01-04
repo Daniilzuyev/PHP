@@ -1,0 +1,11 @@
+<?php 
+   
+function nameFunction() {
+   echo "Hello, World";
+   $a = 24;
+   echo "<br />".$a;
+}
+
+nameFunction();
+
+ ?>
