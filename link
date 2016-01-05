@@ -1,0 +1,18 @@
+<?php
+function foo(&$var)
+{
+     $var++;
+}
+
+$a=5;
+foo($a);
+// $a здесь равно 6
+echo $a;
+echo "<hr />";
+function funct(&$string){
+   $string .= 'this is in inner';
+}
+$str = 'this is out';
+funct($str);
+echo $str;
+?>
