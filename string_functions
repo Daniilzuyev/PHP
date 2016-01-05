@@ -1,0 +1,46 @@
+<?php 
+
+$a = array("str1","str2","str3","str4","str5");
+$b = "1,2,3,4,5,6,7,8,9";   // можно использовать implode смысл не поменяется
+echo $b;
+
+echo "<hr />";
+
+$c = explode(",", $b);
+print_r($c);
+echo $b;
+echo "<hr />";
+
+$x = "image.jpeg";
+$y = strstr($x,'.');
+
+echo $y;
+echo "<hr />";
+$a = "asdfazxcsaqDa";
+echo substr($a,4,-3);
+echo "<hr />";
+// $a = "\\\\<a href='#'>Text</a>";
+$a = "' OR 1==1";
+$a = htmlspecialchars($a);
+$a = trim(htmlspecialchars(stripslashes($a)));
+echo $a;
+echo "<hr />";
+
+if ("andrey" == trim(" andrey")) {   // trim убирает пробелы rtrim - убирает справа пробел, ltrim - убирает слева пробел
+	echo "true";
+}
+
+echo "<hr />";
+
+$user_login = 'd56b699830e77ba53855679cb1d252da';
+$a = 'login';
+
+if(md5($a) == $user_login){
+	echo "success";
+}
+echo md5($a);
+ ?>
+ 
+ ______________________________________________
+ 
+ 
