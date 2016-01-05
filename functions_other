@@ -1,0 +1,33 @@
+<?php 
+
+$array_string = array(
+	                        "string01",
+	                        "string2",
+	                        "string3",
+	                        "string4",
+	                        "string5",
+	                        "string6"
+	                          );
+  $a = 1;
+  echo "<pre>";
+  print_r($array_string);
+  echo "</pre>";
+//  exit("Error!"); разрывает строку и выводит сообщение Error!
+  echo "<pre>";
+  var_dump($array_string);
+  echo "<hr />";
+  var_dump($a);
+  echo "</pre>";
+
+
+  $b = "a";
+  $b .= "<";
+  $b .= "<";
+  $b .= "<";
+  // $b = $b."<";
+
+  echo $b."<br />";
+
+  $c = 1;
+echo isset ($c);
+ ?>
