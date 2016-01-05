@@ -1,0 +1,28 @@
+<?php 
+
+  	echo "<hr />";
+
+  	$a = array(1,4,6,5,4,7,9);
+
+  	echo "<br />".count($a);  // выведет количество символов
+
+  	echo "<hr />";
+
+  	function returnFunc($counter) {
+  		for($i = 0; $i < $counter; $i++){
+  			if($i != 5)
+  			echo ($i+1).") <br />";
+      else
+      	$a1 = 12;
+      $array = array(1,2,3,4,5);
+      	return $array;  //возвращает значение и прекращает всю функцию, в то время как break не прекрывает всю функцию
+  		}
+  		echo "some string";
+  	}
+
+
+  	print_r(returnFunc(16));
+
+   echo $a;
+
+ ?>
