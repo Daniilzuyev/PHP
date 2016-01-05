@@ -1,0 +1,50 @@
+<?php 
+
+echo abs(-54.8); // превращает отрицательные в положительные и наоборот
+echo "<hr />";
+echo round(5.4345);
+echo "<hr />";
+echo ceil(0.0005);
+echo "<hr />";
+echo floor(5.99999999);
+echo "<hr />";
+echo sin(0)."<br />";
+echo cos(0)."<br />";
+echo tan(0)."<br />";
+echo "<hr />";
+echo pow(sqrt(16) ,3);
+echo "<hr />";
+echo rand(-1,0);
+echo "<hr />";
+echo min (1,2,65,78,3,25,45,-1,-25,-111);
+echo "<hr />";
+$random = rand(10,500);
+$a;
+for($i = 0; $i < 10; $i++) {
+   $a[] = $random;
+}
+print_r($a);
+echo "<hr />";
+$c = rand(1,6);
+$abc;
+for($i = 0; $i < 10; $i++) {
+   switch ($c) {
+   	case '1':
+   		$abc[] = "string - 1";
+   		break;
+   	case '2':
+   		$abc[] = "string - 2";
+   		break;
+   		case '3':
+   		$abc[] = "string - 3";
+   		break;
+   		case '4':
+   		$abc[] = "string - 4";
+   		break;
+   	default:
+   		$abc[] = "underfind";
+   		break;
+   }
+}
+print_r($abc);
+ ?>
