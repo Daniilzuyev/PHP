@@ -1,0 +1,9 @@
+<?php 
+  header("Content-type: text/html; charset=UTF-8");
+  if(mail("daniilzuyev@gmail.com", 'Topic', "Hello, world!")) {
+  	echo '<div style="color: green;">Писмо было отправлено!</div>';
+  }
+  else {
+  	echo '<div style="color: red;">Message was not sent</div>';
+  }
+ ?>
