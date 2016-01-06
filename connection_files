@@ -1,0 +1,11 @@
+<?php 
+    require 'connection_files.php'; //далее require код не идет 
+    avg(10,6,"(10+6)/2="); // подставит в параметры функции avg файла connection_files.php 
+    echo "<hr />";
+    //include 'notexist.php';
+    echo "<hr />";
+    require_once 'connection_files.php'; // может подключиться только 1 раз, остальные подключения игнорирует
+    include_once 'connection_files.php'; // подключается и код продолжается
+ ?>
+ 
+ ______________________________________________
