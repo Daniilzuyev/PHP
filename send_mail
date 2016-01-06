@@ -7,3 +7,20 @@
   	echo '<div style="color: red;">Message was not sent</div>';
   }
  ?>
+ 
+ ___________________________________________________________
+ 
+ <?php 
+  header("Content-type: text/html; charset=UTF-8");
+  $to ='daniilzuyev@gmail.com';
+  $subject = 'Topic-X';
+  $message = 'Привет всем!';
+  $header = "From: Autolinex <kasta-laga@yandex.ru>". "\r\n"; // от кого отправляем
+  $header .= "Content-type: text/html; charset=UTF-8". "\r\n"; //кодировка и использование html-тегов
+  if(mail($to, $subject, $message,$header)) {
+  	echo '<div style="color: green;">Писмо было отправлено!</div>';
+  }
+  else {
+  	echo '<div style="color: red;">Message was not sent</div>';
+  }
+ ?>
