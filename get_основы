@@ -1,0 +1,15 @@
+//get.php
+ <form method="get" action="toGet.php">
+	<input type="text" name="user-name" />
+	<input type="password" name="user-password" />
+  <input type="submit" name="send-param" value="enter">
+</form>
+
+
+вводим в URL ...toGet.php/?test_name=Some Text&test_name2=Another Text
+//toGet.php
+
+<?php 
+echo $_GET['test_name']." ".$_GET['test_name2'];
+ ?>
+ // выведет Some Text Another Text
