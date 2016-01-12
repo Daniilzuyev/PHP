@@ -1,0 +1,43 @@
+//post.php
+ <form method="post" action="toPost.php">
+	<input type="text" name="user-name" />
+	<input type="password" name="user-password" />
+  <input type="submit" name="send-param" value="enter">
+</form>
+________________________________________________________
+
+//toPost.php
+<?php 
+$users = array(
+                     "login;password-user",
+                     "user1;123",
+                     "user2;12345",
+                     "user3;12345678"
+	);
+if(isset($_POST['send-param'])){
+     $user_name = trim(strip_tags($_POST['user-name']));
+     $user_password = trim(strip_tags($_POST['user-password']));
+     if(!empty($user_name) && !empty($user_password)) {
+     	$result = "";
+
+      for($i = 0; $i < count($users); $i++) {
+          $info = explode(";",$users[$i]);
+          if($info[0] == $user_name && 
+          	$user_password == $info[1]
+          	) {
+                 $result = "you entered like<strong>".$info[0]."</strong>";
+               break;
+              }
+      }
+     	if(!empty($result)){
+     		echo $result;
+     	}
+     	else {
+     		echo "error in input";
+     	}
+     	}
+else {
+	echo "Not correct input fields!";
+}
+}
+ ?>
