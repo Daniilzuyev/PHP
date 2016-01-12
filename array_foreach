@@ -1,0 +1,10 @@
+<?php
+$countries = array( 
+     "UA" => "Ukraine",
+     "RU"=> "Russia");
+     echo "<select>";
+foreach($countries as $k => $v) {
+  echo "<option value='$k'>$v</option>";
+}
+     echo "</select>";
+ ?>
