@@ -1,0 +1,25 @@
+<?php 
+if(true):
+ echo "true";
+endif;
+echo "<hr />";
+for($i=0;$i<2;$i++):
+	echo $i."<br />";
+endfor;
+echo "<hr />";
+foreach():
+	endforeach;
+echo "<hr />";
+while():
+	endwhile;
+echo "<hr />";
+if(true):
+	echo "a";
+	echo "true";
+	elseif(19 < 6):
+		echo "false";
+	else:
+		echo "default";
+	endif;
+
+ ?>
