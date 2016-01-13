@@ -1,0 +1,6 @@
+http://www.php.su/date
+
+<?php 
+echo date("h, d, m, y");
+echo date("H:i:s Y.m.d");
+ ?>
