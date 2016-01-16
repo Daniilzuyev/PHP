@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Page - 2</title>
+	</head>
+	<body>
+		<div>
+			<a href="index.php">Main</a>
+		</div>
+		<table border="1">
+			<thead>
+			<th>Name</th>
+			<th>Email</th>
+			<th>IP</th>
+			<th>Refer</th>
+			<th>Browser</th>
+			</thead>
+			<tbody>
+			<?php 
+			  $path = "info.txt";
+       	$a = fopen($path,"r");
+      	$b = fread($a, filesize($path));
+      	fclose($a);
+      	print_r($b);
+			 echo "<hr />"
+			 ?>
+
+			<tr>
+			<td>Ilya</td>
+			<td>test@test.ru</td>
+			<td>127.0.0.1</td>
+			<td>http://localhost/php/files</td>
+			<td>Opera</td>
+			</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
