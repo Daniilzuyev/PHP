@@ -1,0 +1,95 @@
+//index.php
+<html>
+	<head>
+		<title>Page-1</title>
+	</head>
+	<body>
+		<div> <a href="show_info.php">Show info</a></div>
+		<form method="post">
+		<label>Name: <input type="text" name="name" /></label>
+		<label>E-mail: <input type="text" name="email" /></label>
+		<?php 
+     if(isset($_SERVER['HTTP_REFERER'])){
+     	$print = $_SERVER['HTTP_REFERER'];
+     }
+     	else{
+     		$print = "no referal page";
+     	}
+		 ?>
+		<div>
+		 <input type="hidden" value="<?php echo $_SERVER['REMOTE_ADDR'];?>" name="ip" />
+		 <input type="hidden" value="<?php echo $print;?>" name="http-referer" />
+		 <input type="hidden" value="<?php echo $_SERVER['HTTP_USER_AGENT'];?>" name="http-user-agent" />
+		</div>
+		<br/>
+		<input type="submit" value="send" name="send-info" />
+		</form>
+		<?php 
+      if (isset($_POST['send-info'])) {
+      	$name = $_POST['name'];
+      	$email = $_POST['email'];
+      	$ip = $_POST['ip'];
+      	$http_referer = $_POST['http-referer'];
+      	$http_user_agent = $_POST['http-user-agent'];
+
+      	$message = $name. "\r\n";
+      	$message .= $email."\r\n";
+      	$message .= $ip."\r\n";
+      	$message .= $http_referer."\r\n";
+      	$message .= $http_user_agent."\r\n";
+
+      	//echo $message;
+
+      	$a = fopen("info.txt","a");
+      	fwrite($a, $message);
+      	fclose($a);
+
+      	echo "Message was written";
+      }
+      
+		 ?>
+	</body>
+</html>
+
+// show_info.php
+<html>
+	<head>
+		<title>Page - 2</title>
+	</head>
+	<body>
+		<div>
+			<a href="index.php">Main</a>
+		</div>
+		<table border="1">
+			<thead>
+			<th>Name</th>
+			<th>Email</th>
+			<th>IP</th>
+			<th>Refer</th>
+			<th>Browser</th>
+			</thead>
+			<tbody>
+			<?php 
+			  $path = "info.txt";
+    //    	$a = fopen($path,"r");
+    //   	$b = fread($a, filesize($path));
+    //   	fclose($a);
+    //   	print_r($b);
+			 // echo "<hr />"
+			  $array_string = file($path);
+			  print_r($array_string);
+
+			  for ($i = 0; $i < count($array_string); $i+= 5) { 
+			  	echo "<tr>";
+			  	   echo "<td>".$array_string[$i]."</td>";
+             echo "<td>".$array_string[$i+1]."</td>";
+             echo "<td>".$array_string[$i+2]."</td>";
+             echo "<td>".$array_string[$i+3]."</td>";
+             echo "<td>".$array_string[$i+4]."</td>";
+			   echo "<tr/>";
+			  }
+			 ?>
+			</tbody>
+		</table>
+	</body>
+</html>
