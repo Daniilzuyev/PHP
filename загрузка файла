@@ -1,0 +1,9 @@
+<?php 
+ if (isset($_POST['send-request'])){
+    print_r($_FILES['load']);
+ }
+ ?>
+ <form method = "post" enctype="multipart/form-data">
+    <input type="file" name="load" />
+    <input type="submit" name="send-request" value="input" />
+ </form>
