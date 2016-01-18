@@ -1,0 +1,11 @@
+<a href="lesson_1.php"></a>
+<?php 
+echo "<a href='lesson_1.php'>Page-1</a>";
+echo "<hr />";
+if(isset($_COOKIE['user_login2'])){
+	echo $_COOKIE['user_login2'];
+}
+else{
+	echo "Cookie underfined";
+}
+ ?>
