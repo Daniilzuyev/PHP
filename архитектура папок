@@ -1,0 +1,63 @@
+<?php 
+$d = opendir("."); // $d - дескриптор
+print_r($d);
+closedir($d);
+ ?> // создает и открывает директорию
+ 
+ <?php 
+// rename("AutoLinex2", "upload");
+// mkdir("test");
+$d = opendir("."); // $d - дескриптор
+$file = "";
+do {
+	if($file != '.' && $file != '..'){
+		if(is_file($file)){
+  echo $file."[FILE]<br />"; // выводит с readdir содержимое директории
+  }
+    elseif(is_dir($file)){
+    	echo $file."[DIR]<br />";
+    }
+    else {
+      //echo $file."[OTHER]<br />";
+    }
+}
+}
+while($file = readdir($d));
+// readdir($d);
+closedir($d);
+ ?>
+ 
+ 
+ <?php 
+
+ function reader_directory($path = ".", $level = 0) {
+// 	 $space = "";
+// 	for($i = 0; $i<$level; $i++){
+//     $space .= " ";
+// 	}
+if(file_exists($path)) {
+$d = opendir("$path"); // $d - дескриптор
+$file = "";
+
+  do {
+	  if($file != '.' && $file != '..'){
+		  if(is_file($file)){
+         echo $file."[FILE]<br />"; // выводит с readdir содержимое директории
+           }
+     elseif(is_dir($file)){
+	       echo $file."[DIR]<br />";
+           }
+      else {
+      //echo $file."[OTHER]<br />";
+           }
+       } 
+    }
+while($file = readdir($d));
+// readdir($d);
+closedir($d);
+    }
+  }
+ reader_directory();
+?>
+
+
