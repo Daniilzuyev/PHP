@@ -1,0 +1,27 @@
+<?php 
+
+ function reader_directory($path, $level = 0) {
+ 	$space .= "";
+ 	for($i = 0; $i < $level; $i++){
+ 		$space .= "-";
+ 	}
+if(file_exists($path)) {
+$d = opendir("$path"); // $d - дескриптор
+$file = "";
+  do {
+	  if($file != '.' && $file != '..'){
+		  if(is_dir($file)){
+         echo $space.$file."[DIR]<br />";
+         reader_directory(($path."/".$file),$level+5);
+           }
+      else {
+         echo $space.$file."[FILE]<br />";
+           }
+       } 
+    }
+while($file = readdir($d));
+closedir($d);
+    }
+  }
+ reader_directory(".");
+?>
