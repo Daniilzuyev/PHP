@@ -1,0 +1,6 @@
+<?php 
+// rename("test.txt", "test2.txt");
+// copy("test2.txt", "2.txt");
+// copy("test2.txt", "3.txt");
+//unlink("3.txt");
+ ?>
