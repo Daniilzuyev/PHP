@@ -1,0 +1,26 @@
+<?php 
+    class PC {
+    	public $CPU = 2.2; // $CPU - имя свойства класса
+    	public $RAM = 8000;
+    	public $OS = "Windows 7";
+    	public $typeCase = "tower";
+
+    	public function __construct($arg1, $arg2) {  // конструктор, вызывается когда создаем обьект new PC(), скобочки из конструктора передаются в скобочки обьекта;
+          echo $arg1."; ".$arg2."<br />";
+    	}
+
+    	public function showInfo() {   // методы, public можно не писать
+         echo "1) CPU: ". $this->CPU."<br />";   // this обращается к нашему классу и от туда тянет данные
+         echo "2) RAM: ". $this->RAM."<br />";
+         echo "3) typeCase: ". $this->typeCase."<br />";
+         echo "<br />".$this->showDescription(); // возвращаем метод извне
+    		}
+    	public function showDescription() {  // метод
+    		return $this->OS ."; Memory". $this->RAM ."CPU: ". $this->CPU;
+    	}
+    }
+    $pc = new PC(20,12); // экземпляр класса, объекты
+    //echo $pc->CPU; 
+    //echo "<br />".$pc->typeCase;
+    $pc->showInfo();
+ ?>
