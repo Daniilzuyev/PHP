@@ -1,0 +1,17 @@
+<?php 
+ class Test {
+ 	public $test1;
+ 	public $test2;
+ 	public $test3;
+ 	public $test4;
+
+  function __construct ($a, $b, $c, $d) {
+    $this->test1 = $a;
+    $this->test2 = $b;
+    $this->test3 = $c;
+    $this->test4 = $d;
+  }
+
+ }
+   $obj = new Test("test1","test2","test3","test4");
+ ?>
