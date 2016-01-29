@@ -1,0 +1,61 @@
+  <?php 
+    class PC {
+    	public $CPU = 2.5; // $CPU - имя свойства класса
+    	public $RAM = 2000;
+    	public $OS = "Windows";
+    	public $typeCase = "mobile";
+
+    	public function __toString(){ //метод toString конвертирует обьект в строку, позволяет выводить обьект echo $pc;
+    		return $this -> showDescription();
+    	}
+
+    	public function __destruct(){ // будет действовать если мы удалим сам обьект(например с помощью unset())
+    		echo "class was delete";
+    	}
+    	public function __clone(){ // выполняется если обьект клонируется $pc3 = clone $pc2;
+    		echo "<h1>Object cloned</h1>";
+    	}
+/*
+    	public function __construct($argCPU, $argRAM, $argOS, $argtypeCase) {  // конструктор, вызывается когда создаем обьект new PC(), скобочки из конструктора передаются в скобочки обьекта;
+          $this->$CPU=$argCPU;
+          $this->$RAM=$argRAM;
+          $this->$OS=$argOS;
+          $this->$typeCase=$argtypeCase;
+    	}
+*/
+    	public function showInfo() {   // методы, public можно не писать
+         echo "1) CPU: ". $this->CPU."<br />";   // this обращается к нашему классу и от туда тянет данные
+         echo "2) RAM: ". $this->RAM."<br />";
+         echo "3) typeCase: ". $this->typeCase."<br />";
+         echo "<br />".$this->showDescription(); // возвращаем метод извне
+    		}
+    	public function showDescription() {  // метод
+    		return "OS ".$this->OS ."; Memory". $this->RAM ."; CPU: ". $this->CPU;
+    	}
+    }
+    $pc = new PC(2,2000,"MAC OS", "desctop"); // экземпляр класса, объекты
+    //echo $pc->CPU; 
+    //echo "<br />".$pc->typeCase;
+    $pc->showInfo();
+    $pc->CPU = 2.7;
+    echo "<hr />";
+    echo $pc;
+    echo "<hr />";
+    echo "<div style='height:30px; background:red;'></div>";
+    $pc2 = new PC(3,2355,"Windows", "mobile"); // экземпляр класса, объекты
+    $pc3 = clone $pc2;
+    //echo $pc->CPU; 
+    //echo "<br />".$pc->typeCase;
+    $pc2->showInfo();
+    $pc2->CPU = 2.5;
+    echo "<hr />";
+    echo $pc2;
+    echo "<hr />";
+    echo "<div style='height:30px; background:red;'></div>";
+
+    $pc3->showInfo();
+    $pc3->CPU = 3;
+    echo "<hr />";
+    echo $pc3;
+    echo "<hr />";
+ ?>
