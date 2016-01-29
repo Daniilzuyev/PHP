@@ -1,0 +1,4 @@
+const PI = 3.14;
+echo self::PI."<br />";
+$pc = new PC (6515, "asdfsad", 9556);
+echo $pc::PI;
